@@ -10,7 +10,8 @@ CLASS_NAMES = ['Potato__Early_blight', 'Potato_Late_blight', 'Potato__healthy']
 # Load the model once at startup to improve performance
 @st.cache_resource
 def load_model():
-    model_path = "C:\\Users\\rakshi\\Desktop\\plant leaf dectection\\trained_plant_disease_model.keras"
+    model_path = os.path.join(os.getcwd(), "trained_plant_disease_model.keras")
+
     if not os.path.exists(model_path):
         st.error(f"Model file not found at {model_path}. Please check the path.")
         return None
@@ -101,7 +102,7 @@ import os
 
 file_id = "1iPVEtnbga94anzsukYggwZnWpP1q2xec"
 url = 'https://drive.google.com/file/d/1iPVEtnbga94anzsukYggwZnWpP1q2xec/view?usp=drive_link'
-model_path = "C:\\Users\\rakshi\\Desktop\\plant leaf dectection\\trained_plant_disease_model.keras"
+model_path = os.path.join(os.getcwd(), "trained_plant_disease_model.keras")
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
