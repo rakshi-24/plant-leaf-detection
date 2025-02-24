@@ -101,7 +101,7 @@ import os
 
 file_id = "1iPVEtnbga94anzsukYggwZnWpP1q2xec"
 url = 'https://drive.google.com/file/d/1iPVEtnbga94anzsukYggwZnWpP1q2xec/view?usp=drive_link'
-model_path = "trained_plant_disease_model.keras"
+model_path = "C:\\Users\\rakshi\\Desktop\\plant leaf dectection\\trained_plant_disease_model.keras"
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
